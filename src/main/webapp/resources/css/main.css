@@ -1,0 +1,169 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #58ACFA;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .menu-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            position: absolute;
+            left: 10px;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+        }
+        .title span {
+            font-size: 1.5rem; /* Adjust the font size as needed */
+            margin-right: 10px;
+        }
+        .title img {
+            width: 40px;
+            height: 40px;
+        }
+        .navbar {
+            background-color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px; /* Add gap between buttons */
+        }
+        .button {
+            border: none;
+            background-color: lightgrey;
+            color: black;
+            cursor: pointer;
+            text-decoration: none;
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            border-radius: 20px; /* Make buttons rounded */
+        }
+        .button.active {
+            background-color: #58ACFA;
+            color: white;
+        }
+        .line {
+            height: 1px;
+            background-color: lightgrey;
+            margin: 10px 0;
+        }
+        .section {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+        main {
+            flex: 1;
+            padding-bottom: 60px; /* footer height */
+        }
+        .calendar_day, .calendar_date {
+            display: flex;
+            justify-content: space-around;
+        }
+        .calendar_day span, .calendar_date span {
+            flex: 1;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        
+        .pill-taken-btn {
+		    background-color: #007BFF; /* 푸른색 배경 */
+		    color: white; /* 버튼 텍스트 흰색 */
+		    border: none; /* 테두리 제거 */
+		    padding: 10px 20px; /* 여백을 추가하여 버튼 크기 조정 */
+		    border-radius: 5px; /* 둥근 모서리 */
+		    font-size: 14px; /* 텍스트 크기 */
+		    cursor: pointer; /* 클릭 가능한 손가락 모양 */
+		    transition: background-color 0.3s ease; /* 부드러운 배경색 변화 효과 */
+		}
+		
+		.pill-taken-btn:hover {
+		    background-color: #0056b3; /* 호버 시 더 어두운 파란색 */
+		}
+		.hidden {
+    display: none;
+}
+
+.section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: lightgray;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    background-color: lightblue;
+    color: white;
+    cursor: not-allowed;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+		
+		        

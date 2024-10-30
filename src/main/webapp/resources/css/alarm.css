@@ -1,0 +1,103 @@
+@charset "UTF-8";
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #FFFFFF; /* 흰색 배경 설정 */
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #58ACFA;
+            padding: 10px;
+            border-bottom: 1px solid lightgrey;
+            justify-content: space-between;
+        }
+        .back-button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .back-button img {
+            width: 24px;
+            height: 24px;
+        }
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            position: relative;
+        }
+        .medication-container {
+            background-color: lightgrey;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            width: calc(100% - 40px); /* 전체 너비에서 패딩을 빼서 조금만 남기고 채움 */
+            margin: 0 20px 20px 20px; /* 좌우에만 마진을 줘서 가로 여백을 조정 */
+        }
+        .medication-info {
+            margin-bottom: 10px;
+        }
+        .caution-container {
+            background-color: yellow;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+        .add-medication-btn {
+            background-color: #58ACFA; /* 헤더와 같은 색상 */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .add-medication-btn:hover {
+            background-color: #3C8DFA; /* 호버 시 색상 변경 */
+        }
+        .start-image {
+            width: 300px; /* 이미지의 너비 조정 */
+            height: auto; /* 비율에 맞게 높이 자동 조정 */
+            display: block;
+        }
+    

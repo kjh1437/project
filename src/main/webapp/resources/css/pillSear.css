@@ -1,0 +1,209 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling (align with shapeSear) */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.5rem; /* Larger for visibility, similar to shapeSear */
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Navigation buttons styling (align with shapeSear) */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    font-size: 1.1rem; /* Slightly larger for better readability */
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-button.selected {
+    background-color: #58ACFA;
+    border: 2px solid #58ACFA;
+    color: #fff;
+}
+
+/* Content section (ensure alignment with shapeSear) */
+.content-section {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search container */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid lightgray;
+}
+
+.text {
+    border: none;
+    background: none;
+    flex: 1;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+#icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.quick-search-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.quick-search-button {
+    width: 120px; /* 모든 버튼의 너비를 120px로 통일 */
+    height: 50px; /* 모든 버튼의 높이를 50px로 통일 */
+    padding: 8px 20px; /* 패딩을 그대로 유지 */
+    margin: 5px; /* 버튼 사이의 간격 */
+    background-color: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    line-height: 1.2; /* 텍스트 라인 높이 설정 */
+}
+
+.quick-search-button:hover {
+    background-color: #58ACFA;
+    border: 2px solid #58ACFA;
+    color: white;
+}
+
+
+/* Recent searches styling */
+.recent-searches {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Divider */
+.divider {
+    margin: 20px 0;
+    border: 1px solid lightgray;
+    width: 100%;
+}
+
+footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 1.5rem;
+        margin-left: 0;
+    }
+
+    .content-section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 5px;
+        flex-direction: column;
+    }
+
+    .footer-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-icon-container {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+}

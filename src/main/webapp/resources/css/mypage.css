@@ -1,0 +1,140 @@
+@charset "UTF-8";
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: auto; 
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #58ACFA;
+            padding: 10px;
+            border-bottom: 1px solid lightgrey;
+            justify-content: space-between;
+        }
+        .back-button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .back-button img {
+            width: 24px;
+            height: 24px;
+        }
+        .header-title {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+        .logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .profile-section {
+            background-color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .profile-icon {
+            width: 120px; /* 원하는 너비로 설정 */
+            height: 120px; /* 원하는 높이로 설정 */
+            background-image: url('pills.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+        .profile-name {
+            margin-top: 1px;
+            font-size: 1.5rem;
+        }
+        .divider {
+            height: 1px;
+            background-color: lightgrey;
+            margin: 0;
+        }
+        .content {
+            background-color: #58ACFA;
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .info-section {
+            background-color: white;
+            border-radius: 10px;
+            width: calc(100% - 40px);
+            padding: 13px;
+            margin-bottom: 20px;
+        }
+        .info-item {
+            padding: 8px 0;
+            border-bottom: 1px solid lightgrey;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .info-item div:first-child {
+            flex: 0 0 70px; /* adjust as needed */
+        }
+        .info-item div:last-child {
+            flex: 1;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .edit-button {
+            background-color: lightgrey;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .edit-button:hover {
+            background-color: #ccc;
+        }
+        .action-item {
+            padding: 15px 0;
+            cursor: pointer;
+            border-top: 1px solid lightgrey;
+            text-align: left;
+        }
+        .action-item:first-of-type {
+            border-top: none;
+        }
+        footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+        main {
+            flex: 1;
+            padding-bottom: 60px; /* footer height */
+        }

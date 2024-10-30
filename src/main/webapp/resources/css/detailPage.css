@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* 전체 바디 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* 헤더 스타일 */
+.top {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA; /* 헤더 배경색 */
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+    height: 40px; /* 고정 높이 설정 (필요한 경우 조정) */
+}
+
+/* 뒤로가기 화살표 스타일 */
+#arrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+/* 주의사항 바로가기 */
+#next {
+	width: 200px;
+	height: auto;
+}
+
+/* 제목 스타일 */
+.title {
+    color: white; /* 제목 색상 */
+    font-size: 1.5rem;
+    margin: 0;
+    flex-grow: 1; /* 제목을 가운데 정렬 */
+    text-align: center;
+}
+
+/* 별 버튼 스타일 */
+.star-button {
+    cursor: pointer;
+    width: 30px; /* 별 버튼 크기 */
+    height: 30px; /* 별 버튼 크기 */
+}
+
+/* 경고 문구 스타일 */
+#warn {
+    margin-top: 50px;
+    background-color: #bbbbbb;
+    padding: 10px;
+    display: none; /* 기본적으로 숨김 처리 */
+}
+
+/* 큰 이미지 스타일 */
+#img {
+    width: 300px;
+    height: auto; /* 비율 유지 */
+    display: block;
+    margin: 20px auto; /* 이미지 가운데 정렬 */
+    margin-top: 40px;
+}
+
+/* 회사명 및 약품명 스타일 */
+.pill_name {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* 성분 및 복용방법 부분 스타일 */
+.pill_ingredient  {
+    margin: 20px 40px;
+}
+
+.pill_take {
+	margin: 0px 40px;
+}
+
+.pill_caution {
+	margin: 20px 40px;
+}
+
+#next {
+	margin: -5px -10px;
+}
+
+.pill_ingredient h3, .pill_take h3, .pill_caution h3 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* DUR 부분 스타일 */
+#DUR {
+    margin: 0px 40px;
+}
+
+#DUR h4 {
+	font-size: 1.15rem;
+}
+
+footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+}
+
+/* 모든 p 요소의 기본 스타일 */
+p {
+    margin: 0;
+    font-size: 1.0rem;
+}
+
+/* 스크롤 방지 및 자동 조절을 위한 스타일 */
+.pill_ingredient p,
+.pill_take p {
+    overflow: hidden; /* 스크롤 방지 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    text-overflow: ellipsis; /* 넘치는 텍스트를 '...'으로 표시 */
+}
+
+/* 추가적인 스타일 예시 (필요에 따라) */
+/* .some-class { ... } */

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pilloud.mapper.BookmarkMapper">
+
+	<!-- 의약품 검색 리스트 -->
+    <insert id="insertBookmark" parameterType="com.pilloud.model.PillVO">
+    	INSERT INTO BOOKMARK_MST VALUES(
+    									#{id},
+    									#{item_seq},
+    									#{item_name},
+    									#{entp_seq}, 
+    									#{entp_name}, 
+    									#{chartn}, 
+    									#{item_image}, 
+    									#{take_day}, 
+    									#{take_begin}, 
+    									#{take_end},
+    									#{take_time},
+    									#{take_frequency}
+    									)  
+    </insert>
+    
+    <!-- 북마크 리스트 -->
+    <select id="selectBookmark" parameterType="com.pilloud.model.PillVO" resultType="com.pilloud.model.PillVO">
+       SELECT * FROM BOOKMARK_MST WHERE ID = #{id};
+    </select>
+    
+    <!-- 북마크 리스트(영양제) -->
+    <select id="selectBookmarkSupplement" parameterType="com.pilloud.model.PillVO" resultType="com.pilloud.model.PillVO">
+       SELECT * FROM BOOKMARK_MST WHERE ID = #{id};
+    </select>
+    
+    <!-- 북마크 삭제  -->
+    <delete id="deleteBookmark" parameterType="com.pilloud.model.PillVO">
+    	DELETE FROM BOOKMARK_MST WHERE ID = #{id} AND ITEM_SEQ = #{item_seq};
+    </delete>
+ 
+ 	<!-- 약 알람 설정 업데이트  -->
+ 	<update id="updateBookmarkAlarm" parameterType="com.pilloud.model.PillVO">
+        UPDATE BOOKMARK_MST
+        SET TAKE_DAY = #{take_day}, 
+        	TAKE_BEGIN = #{take_begin}, 
+            TAKE_END = #{take_end}, 
+            TAKE_TIME = #{take_time}, 
+            TAKE_FREQUENCY = #{take_frequency}
+        WHERE ID = #{id}
+        AND ITEM_NAME = #{item_name}
+    </update>
+</mapper>

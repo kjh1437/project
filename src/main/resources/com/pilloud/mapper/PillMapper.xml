@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pilloud.mapper.PillMapper">
+
+	<!-- 의약품 검색 리스트 -->
+    <select id="searchPillNm" parameterType="com.pilloud.model.PillVO" resultType="com.pilloud.model.PillVO">
+       SELECT * 
+       FROM PILL_MST 
+       WHERE 1=1
+       <if test='itemNm != null and itemNm != ""' >
+			AND ITEM_NAME LIKE CONCAT('%', #{itemNm},'%')
+		</if>
+    </select>
+    
+    <!-- 의약품 검색 리스트(키워드) -->
+    <select id="searchKeyword" parameterType="com.pilloud.model.PillVO" resultType="com.pilloud.model.PillVO">
+       SELECT * 
+       FROM QUICK_MST 
+       WHERE 1=1
+       <if test='keyword != null and keyword != ""' >
+			AND KEYWORD = #{keyword}
+		</if>
+    </select>
+    
+    <!-- 의약품 주의사항 검색 리스트 -->
+    <select id="searchPillWarn" parameterType="String" resultType="com.pilloud.model.PillVO">
+       SELECT * 
+       FROM PILL_MST 
+       WHERE 1=1
+       <if test='seqList != null and seqList != ""' >
+			AND ITEM_SEQ IN (${seqList})
+		</if>
+    </select>
+  
+</mapper>

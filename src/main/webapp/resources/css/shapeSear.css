@@ -1,0 +1,190 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA; /* Same as emlsignup */
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.nav-button {
+    font-size: 1.1rem;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: lightgrey;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-button.selected {
+    background-color: #58ACFA;
+    border: 2px solid #58ACFA;
+    color: #fff;
+}
+
+/* Content section */
+.content-section {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Center the form and its elements */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Ensure the form takes full width */
+}
+
+/* Dropdowns and input boxes */
+.dropdown {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-left: auto; /* Centers the input-box */
+    margin-right: auto; /* Centers the input-box */
+}
+
+.input-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    box-sizing: border-box;
+    display: block;
+   	margin: 0 auto;
+   }
+
+/* Search button with consistent width and center alignment */
+.search-button {
+    width: 440px; /* Same width as dropdown and input-box */
+    padding: 10px 20px; /* Same padding as nav-button */
+    margin-top: 50px;
+    background-color: #58ACFA;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.search-button:hover {
+    background-color: #4e9ada;
+}
+
+footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    .header-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content-section {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 5px;
+        flex-direction: column;
+    }
+
+    .footer-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-icon-container {
+        padding: 5px;
+        margin-bottom: 5px;
+    }

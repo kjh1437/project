@@ -1,0 +1,19 @@
+  spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          kakao:
+            client-id: {카카오 앱 REST API 키}  # 카카오에서 발급받은 키
+            client-secret: ""  # 카카오는 client-secret을 사용하지 않음, 비워둠
+            client-name: Kakao
+            authorization-grant-type: authorization_code
+            redirect-uri: "{리다이렉트 URI}"  # 예: http://localhost:8080/oauth/kakao/callback
+            scope: profile_nickname, account_email  # 필요한 권한 설정
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+  

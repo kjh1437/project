@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* 수정: 회원가입 폼 스타일 */
+.wrapper {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.wrap {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.subject {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.id_wrap,
+.pw_wrap,
+.user_wrap,
+.birth_wrap,
+.mail_wrap,
+.tel_wrap,
+.sex_wrap {
+    margin-bottom: 15px;
+}
+
+.id_name,
+.pw_name,
+.user_name,
+.birth_name,
+.mail_name,
+.tel_name,
+.sex_name {
+    font-weight: bold;
+}
+
+.input_box {
+    display: flex;
+}
+
+.input_box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.mail_check_wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.mail_check_input_box {
+    flex-grow: 1;
+}
+
+.mail_check_button {
+    margin-left: 10px;
+}
+
+.address_input_1_wrap,
+.address_input_2_wrap,
+.address_input_3_wrap {
+    margin-top: 10px;
+}
+
+.address_button {
+    margin-top: 5px;
+}
+
+.join_button_wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.join_button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join_button:hover {
+    background-color: #0056b3;
+}

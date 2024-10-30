@@ -1,0 +1,76 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+}
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+.header-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.map_wrap {
+    position: relative;
+    width: 600px; /* 원하는 너비 설정 */
+    height: 760px; /* 원하는 높이 설정 */
+    margin: 0 auto; /* 수평 중앙 정렬 */
+}
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+#map {
+    width: 100%;
+    height: 100%; /* 부모 요소의 크기에 맞춰서 지도 크기 설정 */
+}
+footer {
+    background-color: white;
+    padding: 10px;
+    border-top: 2px solid lightgrey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.footer-icon-container {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 50%;
+}
+.footer-icon-container.active {
+    background-color: #58ACFA;
+}

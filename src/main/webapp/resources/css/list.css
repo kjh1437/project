@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+/* 전체 바디 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #58ACFA; /* emlsignup.css의 색상으로 수정 */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+}
+/* 검색 바 스타일 */
+#search {
+    display: flex;
+    align-items: center;
+}
+
+#search input.text {
+    border-radius: 20px; /* 둥근 테두리 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 400px;
+    margin-right: 10px;
+}
+
+#search img {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+/* 리스트 스타일 */
+#pillList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 항목 간 간격 */
+}
+
+#pillList ul {
+    background-color: white; /* 흰색 배경 */
+    border-radius: 10px; /* 둥글게 */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+#pillList ul:hover {
+    background-color: #58ACFA; /* header와 같은 색상으로 변경 */
+}
+
+#pillList img {
+    width: 50px; /* 이미지 크기 */
+    height: auto; /* 비율 유지 */
+    margin-right: 10px; /* 이미지와 텍스트 간격 */
+}
+
+footer {
+            background-color: white;
+            padding: 10px;
+            border-top: 2px solid lightgrey;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .footer-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        .footer-icon-container {
+            background-color: lightgrey;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .footer-icon-container.active {
+            background-color: #58ACFA;
+        }
+
+/* 모든 p 요소의 기본 스타일 */
+p {
+    margin: 0;
+    font-size: 1.0rem;
+}
+
+/* 스크롤 방지 및 자동 조절을 위한 스타일 */
+.pill_ingredient p,
+.pill_take p {
+    overflow: hidden; /* 스크롤 방지 */
+    white-space: nowrap; /* 줄바꿈 방지 */
+    text-overflow: ellipsis; /* 넘치는 텍스트를 '...'으로 표시 */
+}

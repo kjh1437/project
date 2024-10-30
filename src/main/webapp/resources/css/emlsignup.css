@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Content section */
+.content-section {
+	margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    flex: 1;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group-sex,
+.form-group-phone {
+    margin-bottom: 15px;
+}
+
+.form-group-sex,
+.form-group-phone label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group-phone input {
+    width: 19.5%;
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* ���쎈�� 以�愿��� 異�媛� */
+}
+
+/* Inline input handling */
+.form-group .inline-input, 
+.form-group-phone .inline-input, 
+.form-group-sex .inline-input {
+    display: inline-block;
+    width: calc(50% - 10px);
+    margin-right: 10px;
+}
+
+.form-group .inline-input:last-child,
+.form-group-phone .inline-input:last-child,
+.form-group-sex .inline-input:last-child {
+    margin-right: 0;
+}
+
+/* Gender input handling */
+.form-group-sex .gender-input {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Check ID button */
+.checkid {
+    padding: 10px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: lightgrey;
+    margin-left: 5px;
+}
+
+/* Signup button */
+.signupBtn {
+    background-color: #58ACFA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.signupBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding-bottom: 100px; /* Space for footer */
+}
+
+/* Hidden elements for input validation */
+.id_input_re_0,
+.id_input_re_1,
+.id_input_re_2,
+.final_id_ck,
+.final_pw_ck,
+.final_pwck_ck,
+.final_name_ck,
+.final_birth_ck,
+.final_mail_ck,
+.final_sex_ck,
+.pwck_input_re_1,
+.pwck_input_re_2 {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    .header-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content-section {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: calc(100% - 10px);
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .form-group .inline-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .checkid {
+        padding: 8px;
+        font-size: 0.9rem;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .signupBtn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+}

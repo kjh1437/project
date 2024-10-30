@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pilloud.mapper.ShapeMapper">
+
+	<!-- 모양 리스트 -->
+    <select id="selectShape" resultType="String">
+        SELECT DISTINCT(DRUG_SHAPE) AS DRUG_SHAPE FROM PILL_MST;
+    </select>
+    
+    <!-- 제형 리스트 -->
+    <select id="selectChartn" resultType="String">
+        SELECT DISTINCT 
+		    CASE 
+		        WHEN SUBSTRING_INDEX(CHARTN, ' ', -1) LIKE '%이다%' 
+		        THEN TRIM(TRAILING '이다.' FROM SUBSTRING_INDEX(CHARTN, ' ', -1))
+		        
+		        WHEN SUBSTRING_INDEX(CHARTN, ' ', -1) LIKE '%정'
+		          OR SUBSTRING_INDEX(CHARTN, ' ', -1) LIKE '%제'
+		          OR SUBSTRING_INDEX(CHARTN, ' ', -1) LIKE '%슐'
+		        THEN SUBSTRING_INDEX(CHARTN, ' ', -1)
+		        
+		        ELSE NULL
+		    END AS CHARTN
+		FROM PILL_MST
+		WHERE (CHARTN IS NOT NULL);
+
+    </select>
+    
+    <!-- 색상 리스트 -->
+    <select id="selectColor" resultType="String">
+        SELECT DISTINCT TRIM(BOTH ' ' FROM SUBSTRING_INDEX(SUBSTRING_INDEX(COLOR_CLASS1, ',', N), ',', -1)) AS COLOR
+		FROM PILL_MST
+		INNER JOIN (
+		    SELECT 1 AS N UNION ALL
+		    SELECT 2 UNION ALL
+		    SELECT 3 
+		) AS NUMS ON CHAR_LENGTH(TRIM(BOTH ' ' FROM COLOR_CLASS1)) - CHAR_LENGTH(REPLACE(TRIM(BOTH ' ' FROM COLOR_CLASS1), ',', '')) >= N-1
+		WHERE TRIM(BOTH ' ' FROM SUBSTRING_INDEX(SUBSTRING_INDEX(COLOR_CLASS1, ',', N), ',', -1)) IS NOT NULL
+		AND TRIM(BOTH ' ' FROM SUBSTRING_INDEX(SUBSTRING_INDEX(COLOR_CLASS1, ',', N), ',', -1)) <![CDATA[<>]]> '';
+    </select>
+    
+    <!-- 약물 검색리스트 -->
+    <select id="searchPill" parameterType="com.pilloud.model.PillVO" resultType="com.pilloud.model.PillVO">
+    	SELECT  * <!--ITEM_SEQ, ITEM_NAME, DRUG_SHAPE, CHARTN, COLOR_CLASS1, COLOR_CLASS2, LINE_FRONT, LINE_BACK, PRINT_FRONT, PRINT_BACK-->
+		FROM PILL_MST 
+		WHERE 1=1
+		<if test='shape != null and shape != ""' >
+			AND DRUG_SHAPE LIKE CONCAT('%', #{shape},'%')
+		</if>
+		<if test='chartn != null and chartn != ""' >
+			AND CHARTN LIKE CONCAT('%', #{chartn},'%')
+		</if>
+		<if test='color != null and color != ""' >
+			AND (COLOR_CLASS1 LIKE CONCAT('%', #{color},'%') OR COLOR_CLASS2 LIKE CONCAT('%', #{color},'%')) 
+		</if>	
+		<if test='line != null and line != ""' >
+			AND (LINE_FRONT LIKE CONCAT('%', #{line},'%') OR LINE_BACK LIKE CONCAT('%', #{line},'%')) 
+		</if>
+		<if test='print != null and print != ""' >
+			AND (PRINT_FRONT LIKE CONCAT('%', #{print},'%') OR PRINT_BACK LIKE CONCAT('%', #{print},'%')) 
+		</if>
+    </select>
+</mapper>  
+
+
+
+

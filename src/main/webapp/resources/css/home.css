@@ -1,0 +1,49 @@
+body {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 10px; /* Ensure there's some padding for smaller screens */
+        }
+        .container {
+            text-align: center;
+            width: 100%; /* Ensure the container takes full width */
+        }
+        .logo {
+            width: 80%;
+            max-width: 300px; /* Ensure the logo does not exceed a certain size */
+            margin-bottom: 50px; /* Adjusted margin for better spacing on smaller screens */
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            max-width: 300px; /* Ensure the buttons do not exceed a certain size */
+            margin: 0 auto; /* Center the buttons */
+        }
+        button {
+            font-size: 1rem;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Ensure buttons take full width */
+        }
+        .login-btn {
+            background-color: #f2f2f2;
+            color: #000;
+        }
+        .signup-btn {
+            background-color: #58ACFA;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) {
+            .logo {
+                margin-bottom: 30px; /* Reduced margin for smaller screens */
+            }
+        }

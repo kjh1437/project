@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+/* 전체 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+/* 헤더 스타일 (첫 번째 CSS 파일과 맞춤) */
+.top {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+    height: 40px; /* 고정 높이 설정 (필요한 경우 조정) */
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* 경고 정보 스타일 */
+#caution {
+    padding: 20px;
+}
+
+/* 각 섹션 제목 스타일 */
+h3 {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 25px;
+    font-size: 1.5rem;
+}
+
+/* 텍스트 영역 스타일 */
+textarea {
+    width: 90%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 10px 20px 20px 25px;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    font-size: 1.0rem;
+}
+
+/* footer 스타일 (emlsignup.css와 동일하게 수정됨) */
+footer {
+    background-color: white;
+    padding: 10px;
+    border-top: 2px solid lightgrey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: -100px; /* Initially hidden */
+    width: 100%;
+    transition: bottom 0.5s ease; /* Slide-up effect */
+}
+
+.footer-visible {
+    bottom: 0; /* Visible footer */
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.footer-icon-container {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.footer-icon-container.active {
+    background-color: #58ACFA;
+}
+
+/* 구분선 스타일 */
+hr {
+    margin: 20px 0;
+    border: 0;
+    height: 1px;
+    background: lightgray;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pilloud.mapper.UserPillAlertMapper">
+    <insert id="addPillAlert">
+        INSERT INTO USER_PILL_ALERTS (USER_ID, ITEM_SEQ, ALERT_TIME, ALERT_DAYS, ALERT_INTERVAL)
+        VALUES (#{userId}, #{itemSeq}, #{alertTime}, #{alertDays}, #{alertInterval})
+    </insert>
+
+    <select id="getPillAlertsByUserId" resultType="com.pilloud.model.UserPillAlertVO">
+        SELECT * FROM USER_PILL_ALERTS WHERE USER_ID = #{userId}
+    </select>
+
+    <delete id="deletePillAlert">
+        DELETE FROM USER_PILL_ALERTS WHERE ALERT_ID = #{alertId}
+    </delete>
+
+    <update id="updatePillAlert">
+        UPDATE USER_PILL_ALERTS
+        SET ITEM_SEQ = #{itemSeq}, 
+            ALERT_TIME = #{alertTime}, 
+            ALERT_DAYS = #{alertDays}, 
+            ALERT_INTERVAL = #{alertInterval}
+        WHERE ALERT_ID = #{alertId}
+    </update>
+</mapper>

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+table {
+		width: 500px; /* 테이블 크기를 줄입니다 */
+		height: auto;
+		border: 1px solid #444444;
+		border-collapse: collapse;
+		table-layout: fixed;
+}
+
+td {
+    height: 100px; /* 셀 높이를 줄입니다 */
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    text-align: center;
+    vertical-align: top;
+}
+
+.date {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    font-size: 15px; /* 날짜 크기를 줄입니다 */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px; /* 콘텐츠 크기를 줄입니다 */
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 1px;
+}
+
+p {
+    margin: 0;
+    font-size: 10px;
+}
+
+.calendar_day {
+    display: flex;
+    justify-content: space-around;
+}
+
+.calendar_date {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    background-color: #58ACFA;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    justify-content: space-between;
+}
+
+.back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-title {
+    color: white;
+    font-size: 1.5rem; /* Larger for visibility, similar to shapeSear */
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #fff;
+        }        
