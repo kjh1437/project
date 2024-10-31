@@ -66,7 +66,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<version>1.2.17</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -88,13 +88,7 @@
 			<scope>runtime</scope>
 		</dependency> 
 
-		<!-- log4j 추가 -->
-		 <!-- https://mvnrepository.com/artifact/log4j/log4j -->
-		<dependency>
-		    <groupId>log4j</groupId>
-		    <artifactId>log4j</artifactId>
-		    <version>1.2.17</version>
-		</dependency>
+		
 		 
 		<dependency>
             <groupId>org.hibernate.javax.persistence</groupId>
@@ -192,11 +186,7 @@
 		    <scope>provided</scope>
 		</dependency>
 		<!-- json객체 처리 -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.12.5</version> <!-- 최신 버전 사용 가능 -->
-		</dependency>
+		
 		
 	
 		<!-- security -->
@@ -235,13 +225,7 @@
 		    <version>3.0.8</version>
 		</dependency>
 
-		<!-- boolean 타입 데이터를 문자 타입으로 자동 변환해주는 라이브러리 -->		
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-		    <groupId>com.fasterxml.jackson.core</groupId>
-		    <artifactId>jackson-databind</artifactId>
-		    <version>2.11.0</version>
-		</dependency>
+		
 		
 		<!-- 파일 첨부(업로드) 라이브러리 -->
 		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
