@@ -192,7 +192,7 @@ $(document).ready(function(){
         
         /* 최종 유효성 검사 */   
         if(idCheck&&idckCheck&&pwCheck&&pwckCheck&&pwckcorCheck&&nameCheck&&birthCheck&&tel1Check&&tel2Check&&tel3Check){
-           $("#signup_form").attr("action", "/signup"); /*해당코드 구글링해보기. 어떤경로를 넣어줘야하는지 파악. 기존에 /member/main으로 되어있어서 오류났음*/
+           $("#signup_form").attr("action", "/signup"); 
           $("#signup_form").submit(); 
           // onclick="location.href='http://localhost:8080/login'"
         }   
